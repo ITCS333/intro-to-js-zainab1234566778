@@ -4,15 +4,14 @@
  * @returns {number} The sum of a and b.
  */
 function sum(a, b) {
-  // TODO: Implement this function.
-}
+  return a + b;}
 
 /**
  * @param {string} str The string to reverse.
  * @returns {string} The reversed string.
  */
 function reverseString(str) {
-  // TODO: Implement this function.
+  return str.split("").reverse().join("");
 }
 
 /**
@@ -20,7 +19,19 @@ function reverseString(str) {
  * @returns {number} The largest number in the array. Return null if the array is empty.
  */
 function findLargest(numbers) {
-  // TODO: Implement this function.
+ if (numbers.length === 0) {
+    return null;
+  }
+
+  let largest = numbers[0];
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+      largest = numbers[i];
+    }
+  }
+
+  return largest; 
 }
 
 /**
@@ -30,7 +41,10 @@ function findLargest(numbers) {
  * The check should be case-insensitive.
  */
 function isPalindrome(str) {
-  // TODO: Implement this function.
+ let text = str.toLowerCase();
+  let reversed = text.split("").reverse().join("");
+
+  return text === reversed;
 }
 
 /**
@@ -38,7 +52,15 @@ function isPalindrome(str) {
  * @returns {number[]} A new array containing only the even numbers from the original array.
  */
 function filterEvenNumbers(numbers) {
-  // TODO: Implement this function.
+let result = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      result.push(numbers[i]);
+    }
+  }
+
+  return result;
 }
 
 
